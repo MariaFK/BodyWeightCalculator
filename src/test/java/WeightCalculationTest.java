@@ -53,5 +53,28 @@ public class WeightCalculationTest {
         driver.quit();
         Assert.assertEquals(starvationMessage, "Your category is Underweight");
     }
+    @Test
+    public void normalWeightTest() {
+        //Open browser
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+
+        // Open url of log in page
+        driver.get("https://healthunify.com/bmicalculator/");
+
+        //input weight into "weight" box
+        driver.findElement(By.name("wg")).sendKeys("60");
+
+        //input height into "height" box
+        driver.findElement(By.name("ht")).sendKeys("180");
+
+        //click "Calculate"
+        driver.findElement(By.name("cc")).click();
+
+        //add check, close driver
+        String starvationMessage = driver.findElement(By.name("desc")).getAttribute("value");
+        driver.quit();
+        Assert.assertEquals(starvationMessage, "Your category is Normal");
+    }
 
 }
