@@ -28,7 +28,6 @@ public class WeightCalculationTest {
         String starvationMessage = driver.findElement(By.name("desc")).getAttribute("value");
         driver.quit();
         Assert.assertEquals(starvationMessage, "Your category is Starvation");
-        //Assert.assertSame(starvationMessage, "Your category is Starvation");
     }
 
 }
