@@ -99,5 +99,29 @@ public class WeightCalculationTest {
         driver.quit();
         Assert.assertEquals(starvationMessage, "Your category is Overweight");
     }
+    @Test
+    public void obeseTest() {
+        //Open browser
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+
+        // Open url of log in page
+        driver.get("https://healthunify.com/bmicalculator/");
+
+        //input weight into "weight" box
+        driver.findElement(By.name("wg")).sendKeys("100");
+
+        //input height into "height" box
+        driver.findElement(By.name("ht")).sendKeys("180");
+
+        //click "Calculate"
+        driver.findElement(By.name("cc")).click();
+
+        //add check, close driver
+        String starvationMessage = driver.findElement(By.name("desc")).getAttribute("value");
+        driver.quit();
+        Assert.assertEquals(starvationMessage, "Your category is Obese");
+    }
+
 
 }
