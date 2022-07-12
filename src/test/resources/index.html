@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id>Homework HTML</title>
+    <style>
+        p {
+            text-align: center;
+            font-style: inherit;
+            font-size: 80px;
+            color: #FFB700;
+        }
+
+        .div1style {
+            text-align: center;
+            font-style: revert;
+            font-size: 40px;
+            color: #872a23;
+        }
+
+        .div2style {
+            text-align: center;
+            font-style: inherit;
+            font-size: 30px;
+            color: #CA1343;
+        }
+    </style>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+
+<h1 class="h1style" id="greeting" name="greeting_message">Welcome, Stranger!</h1>
+<br>
+<br>
+<p id="introduction" name="my_name_is">My name is Maria</p>
+<br>
+<br>
+<div class="div1style" id="offer" name="invitation">Please, see the table with my travel plans</div>
+<br>
+<div id="travel_plans" name="my_travel_plans">
+    <table border=1 align=center font-size=15px id="countries_and_cities" name="countries_and_cities_to_visit">
+        <tr>
+            <td style="font-weight: bold">Country</td>
+            <td style="font-weight: bold">City</td>
+        </tr>
+        <tr>
+            <td>Italy</td>
+            <td>Florence</td>
+        </tr>
+        <tr>
+            <td>Norway</td>
+            <td>Oslo</td>
+        </tr>
+        <tr>
+            <td>Portugal</td>
+            <td>Lisbon</td>
+        </tr>
+    </table>
+</div>
+<br>
+<br>
+<div class="div2style" id="bands" name="my_favourite_bands">
+    <span id="bands_text" name="text_about_bands">I like this bands</span>
+    <select id="select_group" name="choose_the_group">
+        <option>Imagine Dragons</option>
+        <option>Nickelback</option>
+        <option>Moda</option>
+    </select>
+</div>
+<br>
+<br>
+<div align="center">
+    <span id="text_hand1" name="text_right_hand">Right-handed:</span>
+    <br>
+    <input id="checkbox1" name="checkbox_right_hand" type="checkbox">
+    <br>
+    <span id="text_hand2" name="text_left_hand">Left-handed:</span>
+    <br>
+    <input id="checkbox2" name="checkbox_left_hand" type="checkbox">
+    <br>
+    <br>
+    <a id="link" name="open_link" href="https://www.w3schools.com/">W3Schools</a>
+</div>
+<br>
+<br>
+<div align="center">
+    <input id="elem" type="button" value="Click me!">
+    <script>
+        elem.onclick = function () {
+            alert('Wish you good day!');
+        };
+    </script>
+    <br>
+    <br>
+    <img id="picture" name="attached_picture" src="heart.jfif" alt="Oops, you found it!">
+</div>
+</body>
+</html>
